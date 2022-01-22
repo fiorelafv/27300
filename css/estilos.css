@@ -1,149 +1,326 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
-*{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	text-decoration: none;
-}
-
-body{
-	font-family: 'Montserrat', sans-serif;
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /*NAVBAR RESPONSIVE*/
 nav{
-	height: 80px;
-	background: #ffbc00;
+    height: 80px;
+    background: #ffbc00;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 nav img{
-	width: 150px;
-	position: absolute;
-	top: 8px;
-	left: 12%;
+    width: 150px;
+    position: absolute;
+    top: 8px;
+    left: 12%;
 }
 
 nav ul{
-	float: right;
-	margin-right: 25px;
+    float: right;
+    margin-right: 25px;
 }
 
 nav ul li{
-	display: inline-block;
-	line-height: 80px;
-	margin-right: 15px;
+    display: inline-block;
+    line-height: 80px;
+    margin-right: 15px;
 }
 
 nav ul li a{
-	position: relative;
-	color: #000;
-	font-size: 18px;
-	padding: 5px 0;
-	font-weight: 500;
+    position: relative;
+    color: #000;
+    font-size: 18px;
+    padding: 5px 0;
+    font-weight: 500;
 }
 
 nav ul li a:before{
-	position: absolute;
-	content: '';
-	left: 0;
-	bottom: 0;
-	height: 2px;
-	width: 100%;
-	background: #fff;
-	transform: scaleX(0);
-	transform-origin: left;
-	transition: transform .2s linear;
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .2s linear;
 }
 
 nav ul li a:hover:before{
-	transform: scaleX(1);
-	transform-origin: left;	
+    transform: scaleX(1);
+    transform-origin: left; 
 }
 
 .active{
-	color: #e42288;
+    color: #e42288;
 }
 
 label #btn,
 label #cancel{
-	color: #000;
-	font-size: 30px;
-	float: right;
-	line-height: 80px;
-	margin-right: 40px;
-	cursor: pointer;
-	display: none;
+    color: #000;
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
 }
 
 #check{
-	display: none;
+    display: none;
 }
 
-@media (max-width: 1118px){
-	nav img{
-		left: 8%;
-	}
+/*FORMULARIO*/
+.form-container{
+    height: 100vh;
+    background-color: #e42288;
+    background-image:  radial-gradient(#ffbc00 1.1px, transparent 1.1px), radial-gradient(#ffbc00 1.1px, #e42288 1.1px);
+    background-size: 44px 44px;
+    background-position: 0 0,22px 22px;
+    font-weight: 500;
 }
 
-@media (max-width: 944px){
-	nav img{
-		left: 6%;
-		top: 11px;
-		width: 130px;
-	}
-
-	nav ul li a{
-		font-size: 17px;
-	}
+.container{
+    background-color: #fff;
+    width: 95%;
+    min-width: 420px;
+    padding: 35px 50px;
+    transform: translate(-50%, -50%);
+    position: relative;
+    left: 50%;
+    top: 50%;
+    border-radius: 10px;
+    box-shadow: 20px 30px 25px rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 860px){
-	label #btn{
-		display: block;
-	}
-
-	ul{
-		position: fixed;
-		width: 100%;
-		height: 100vh;
-		background: #ffbc00;
-		top: 80px;
-		left: -100%;
-		text-align: center;
-		transition: all .5s;
-	}
-
-	nav ul li{
-		display: block;
-		margin: 40px 0;
-		line-height: 10px;
-	}
-
-	nav ul li a{
-		font-size: 20px;
-	}
-
-	#check:checked ~ ul{
-		left: 0;
-	}
-
-	#check:checked ~ label #btn{
-		display: none;
-	}
-
-	#check:checked ~ label #cancel{
-		display: block;
-	}
+h1{
+    font-size: 30px;
+    text-align: center;
 }
 
-/*GRADIENTE*/
-.gradiente{
-	width: 100%;
-	background-color: #e42288;
-	background-image:  radial-gradient(#ffbc00 1.1px, transparent 1.1px), radial-gradient(#ffbc00 1.1px, #e42288 1.1px);
-	background-size: 44px 44px;
-	background-position: 0 0,22px 22px;
-	display: flex;
-	min-height: 100vh;
+.p-form{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+form{
+    width: 100%;
+    position: relative;
+    margin: 30px auto 0 auto;
+}
+
+.row-form{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px 30px;
+    margin-bottom: 20px;
+}
+
+label{
+    font-size: 14px;;
+}
+
+textarea,
+input{
+    width: 100%;
+    font-weight: 500;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1.2px solid #c4cae0;
+    margin-top: 5px;
+}
+
+textarea{
+    resize: none;
+}
+
+textarea:focus,
+input: focus{
+    outline: none;
+    border-color: #e42288;
+}
+
+.btn-form{
+    border: none;
+    padding: 10px 20px;
+    color: #000;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/*FOOTER*/
+.footer{
+    background-color: #000;
+    padding: 70px 0;
+}
+
+.container-footer{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row-footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e42288;
+    height: 2px;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    color: #bbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: #fff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #000;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #1a1b1e;
+}
+
+.footer-col .social-links img{
+    width: 15px;
+    height: 15px;
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 1200px){
+    nav img{
+        left: 8%;
+    }
+}
+
+@media (max-width: 768px){
+    nav img{
+        left: 6%;
+        top: 11px;
+        width: 130px;
+    }
+
+    nav ul li a{
+        font-size: 17px;
+    }
+
+    .form-container{
+        height: 110vh;
+        margin: 30px 0 0 0;
+    }
+
+    .footer-col{
+      width: 50%;  
+      margin-bottom: 30px;
+
+  }
+}
+
+@media (max-width: 576px){
+    label #btn{
+        display: block;
+    }
+
+    .ul-nav{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #ffbc00;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 40px 0;
+        line-height: 10px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    #check:checked ~ label #btn{
+        display: none;
+    }
+
+    #check:checked ~ label #cancel{
+        display: block;
+    }
+
+    .form-container{
+        height: 110vh;
+        margin: 60px 0 0 0;
+    }
+
+    .footer-col{
+        width: 100%;
+    }
 }

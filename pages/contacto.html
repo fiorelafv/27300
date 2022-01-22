@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Formulario para poder contactarse con el GCBA">
+	<meta name="keywords" content="Formulario de contacto turismo CABA, cómo contactarme con el turismo de la GCBA">
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined">
+	<link rel="icon" href="../assets/img/letras-logoba.ico">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+	<title>BA - Contacto</title>
+</head>
+<body>
+	<!-- MENÚ -->
+	<header>
+		<nav>
+			<input type="checkbox" id="check">
+			<label for="check">
+				<span class="material-icons-outlined" id="btn">
+					menu
+				</span>
+				<span class="material-icons-outlined" id="cancel">
+					close
+				</span>
+			</label>
+			<a href="../index.html"><img src="../assets/img/logoba.png" alt="logo buenos aires ciudad"></a>
+			<ul class="ul-nav">
+				<li><a href="../index.html">Inicio</a></li>
+				<li><a href="#">Descubrila</a></li>
+				<li><a href="#">Información</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#" class="active">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<!-- FORMULARIO -->
+	<div class="form-container">
+		<div class="container">
+			<h1>Contáctanos</h1>
+			<p class="p-form">¿Tenés alguna duda o sugerencia? Dejanos tu mensaje</p>	
+			<form>
+				<div class="row-form">
+					<div class="column-form">
+						<label for="name">Nombre</label>
+						<input type="text" id="name" required>
+					</div>
+					<div class="column-form">
+						<label for="email">Mail</label>
+						<input type="email" id="email" required>
+					</div>
+				</div>
+				<div class="row-form">
+					<div class="column-form">
+						<label for="subject">Asunto</label>
+						<input type="text" id="subject" required>
+					</div>
+					<div class="column-form">
+						<label for="contact">Teléfono</label>
+						<input type="tel" id="contact" placeholder="(+54) 0000-0000" required>
+					</div>
+				</div>
+				<div class="row-form">
+					<div class="column-form">
+						<label for="issue">Mensaje</label>
+						<textarea id="issue" placeholder="Escriba su mensaje..." required rows="3"></textarea>
+					</div>
+				</div>
+				<button class="btn-form">Enviar</button>
+			</form>		
+		</div>
+	</div>
+
+	<!-- FOOTER -->
+	<footer class="footer">
+		<div class="container-footer">
+			<div class="row-footer">
+				<div class="footer-col">
+					<h4>Descubrila</h4>
+					<ul>
+						<li><a href="#">Imperdibles</a></li>
+						<li><a href="#">Conocé otros puntos</a></li>
+						<li><a href="#">Mapa de la ciudad</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Información</h4>
+					<ul>
+						<li><a href="#">Lo que tenés que saber</a></li>
+						<li><a href="#">Agenda porteña</a></li>
+						<li><a href="#">Últimas noticias</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Blog</h4>
+					<ul>
+						<li><a href="#">Últimos posteos</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Seguinos en nuestras redes</h4>
+					<div class="social-links">
+						<a><img src="../assets/img/icons/facebook-f-brands.svg" alt="icono facebook"></a>
+						<a><img src="../assets/img/icons/twitter-brands.svg" alt="icono twitter"></a>
+						<a><img src="../assets/img/icons/instagram-brands.svg" alt="icono instagram"></a>
+						<a><img src="../assets/img/icons/youtube-brands.svg" alt="icono instagram"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
