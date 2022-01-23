@@ -3,35 +3,191 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>BA - Descubrila</title>
+	<meta name="description" content="Inicio de la página de turismo de la Ciudad de Buenos Aires. Información sobre qué hacer en la ciudad y cuáles son los requisitos para ingresar">
+	<meta name="keywords" content="BA Turismo, Buenos Aires Ciudad, Gobierno de la Ciudad de Buenos Aires, qué hacer en la ciudad, requisitos para ingresar a CABA, ¿piden test para ingresar a CABA?">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined">
+	<link rel="icon" href="assets/img/letras-logoba.ico">
+	<title>BA - Inicio</title>
 </head>
 <body>
 	<!-- MENÚ -->
-	<nav>
-		<input type="checkbox" id="check">
-		<label for="check">
-			<span class="material-icons-outlined" id="btn">
-				menu
-			</span>
-			<span class="material-icons-outlined" id="cancel">
-				close
-			</span>
-		</label>
-		<img src="assets/img/logoba.png" alt="logo buenos aires ciudad">
-		<ul>
-			<li><a href="#" class="active">Inicio</a></li>
-			<li><a href="#">Descubrila</a></li>
-			<li><a href="#">Información</a></li>
-			<li><a href="#">Blog</a></li>
-			<li><a href="#">Contacto</a></li>
-		</ul>
-	</nav>
+	<header>
+		<nav>
+			<input type="checkbox" id="check">
+			<label for="check">
+				<span class="material-icons-outlined" id="btn">
+					menu
+				</span>
+				<span class="material-icons-outlined" id="cancel">
+					close
+				</span>
+			</label>
+			<a href="index.html"><img src="assets/img/logoba.png" alt="logo buenos aires ciudad"></a>
+			<ul class="ul-nav">
+				<li><a href="index.html" class="active">Inicio</a></li>
+				<li><a href="pages/descubrila.html">Descubrila</a></li>
+				<li><a href="pages/informacion.html">Información</a></li>
+				<li><a href="pages/blog.html">Blog</a></li>
+				<li><a href="pages/contacto.html">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
 	
-	<!-- VIDEO -->
-	<div class="iframe-container">
-		<iframe width="100%" height="585px" src="https://www.youtube.com/embed/82UU2WIsbq0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
+	<main>
+		<!-- VIDEO -->
+		<section class="iframe-container">
+			<iframe width="100%" height="585px" src="https://www.youtube.com/embed/82UU2WIsbq0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</section>
+
+		<!-- DESTACADOS -->
+		<section>
+			<h1>Destacados</h1>
+			<div class="cards-destacados">
+				<div class="container-destacados">
+					<div class="card-destacados">
+						<figure><img src="assets/img/llegada-ciudad.jpg" alt="mujer llegando a la ciudad"></figure>
+						<div class="card-content">
+							<h2 class="h2-cards">Completá la DDJJ</h2>
+							<p>¡Conocé los requisitos para ingresar!</p>
+							<a href="pages/informacion.html" target="_blank" class="btn">Ver más</a>
+						</div>
+					</div>
+					<div class="card-destacados">
+						<figure><img src="assets/img/podcast.jpg" alt="imagen podcast"></figure>
+						<div class="card-content">
+							<h2 class="h2-cards">Buenos Aires Oculta</h2>
+							<p>¡Escuchá el podcast sobre las historias de la ciudad!</p>
+							<a href="https://open.spotify.com/show/6U4mReUlhKlr5uhVPxK3CU" target="_blank" class="btn">Ver más</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- DESCUBRILA -->
+		<section>
+			<h1>Descubrila</h1>
+			<div class="wrapper">
+				<div class="gallery">
+					<div class="gallery__item gallery__item--1">
+						<a href="pages/descubrila.html" target="_blank" class="gallery_link">
+							<img src="assets/img/cementerio-recoleta.jpg" alt="cementerio de la recoleta" class="gallery__image">
+							<div class="gallery__overlay">
+								<span>Cementerio Recoleta</span>
+							</div>
+						</a>
+					</div>
+					<div class="gallery__item gallery__item--2">
+						<a href="pages/descubrila.html" target="_blank" class="gallery_link">
+							<img src="assets/img/cafe-tortoni.jpg" alt="cafe tortoni" class="gallery__image">
+							<div class="gallery__overlay">
+								<span>Café Tortoni</span>
+							</div>
+						</a>
+					</div>
+					<div class="gallery__item gallery__item--3">
+						<a href="pages/descubrila.html" target="_blank" class="gallery_link">
+							<img src="assets/img/floralis-generica.jpg" alt="floralis generica" class="gallery__image">
+							<div class="gallery__overlay">
+								<span>Floralis Genérica</span>
+							</div>
+						</a>
+					</div>
+					<div class="gallery__item gallery__item--4">
+						<a href="pages/descubrila.html" target="_blank" class="gallery_link">
+							<img src="assets/img/obelisco.jpg" alt="obelisco" class="gallery__image">
+							<div class="gallery__overlay">
+								<span>Obelisco</span>
+							</div>
+						</a>
+					</div>
+					<div class="gallery__item gallery__item--5">
+						<a href="pages/descubrila.html" target="_blank"  class="gallery_link">
+							<img src="assets/img/cabildo.jpg" alt="cabildo" class="gallery__image">
+							<div class="gallery__overlay">
+								<span>Cabildo</span>
+							</div>
+						</a>
+					</div>
+					<div class="gallery__item gallery__item--6">
+						<a href="pages/descubrila.html" target="_blank" class="gallery_link">
+							<img src="assets/img/caminito.jpg" alt="caminito" class="gallery__image">
+							<div class="gallery__overlay">
+								<span>Caminito</span>
+							</div>
+						</a>
+					</div>
+				</div>		
+			</div>
+		</section>
+
+		<!-- PUNTOS CLAVE -->
+		<section>
+			<h1>Puntos clave para conocer la ciudad</h1>
+			<div class="puntos-clave">
+				<a href="pages/descubrila.html" target="_blank"><img src="assets/img/ba-puntosclave.jpg" alt="imagen puntos clave"></a>
+			</div>
+		</section>
+
+		<!-- AGENDA PORTEÑA -->
+		<section>
+			<h1>Agenda Porteña</h1>
+			<div class="events">
+				<div class="row-agenda">
+					<div class="col-agenda">
+						<img src="assets/img/maestra-nuevanormalidad.jpg" alt="maestra nueva normalidad">
+						<h2 class="h2-agenda">Juan Pablo Geretto</h2>
+						<p class="p-agenda">¡Ella pensaba que lo había dado todo. Hasta que le tocó dar una clase virtual!</p>
+						<a href="pages/informacion.html" target="_blank" class="ctn">Ver más</a>
+					</div>
+					<div class="col-agenda">
+						<img src="assets/img/sandra-mihanovich.jpg" alt="sandra mihanovich">
+						<h2 class="h2-agenda">Sandra Mihanovich</h2>
+						<p class="p-agenda">¡Volvemos a tu casa! ¡Comenzamos el año con nuevo streaming!</p>
+						<a href="pages/informacion.html" target="_blank" class="ctn">Ver más</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- FOOTER -->
+	<footer class="footer">
+		<div class="container-footer">
+			<div class="row-footer">
+				<div class="footer-col">
+					<h4>Descubrila</h4>
+					<ul>
+						<li><a href="pages/descubrila.html" target="_blank">Imperdibles</a></li>
+						<li><a href="pages/descubrila.html" target="_blank">Conocé otros puntos</a></li>
+						<li><a href="pages/descubrila.html" target="_blank">Mapa de la ciudad</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Información</h4>
+					<ul>
+						<li><a href="pages/informacion.html" target="_blank">Lo que tenés que saber</a></li>
+						<li><a href="pages/informacion.html" target="_blank">Agenda porteña</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Blog</h4>
+					<ul>
+						<li><a href="pages/blog.html" target="_blank">Últimos posteos</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Seguinos en nuestras redes</h4>
+					<div class="social-links">
+						<a href="https://www.facebook.com/Travel-Buenos-Aires-125624064121107" target="_blank"><img src="assets/img/icons/facebook-f-brands.svg" alt="icono facebook"></a>
+						<a href="https://twitter.com/turismobaok" target="_blank"><img src="assets/img/icons/twitter-brands.svg" alt="icono twitter"></a>
+						<a href="https://www.instagram.com/turismobuenosairesok/" target="_blank"><img src="assets/img/icons/instagram-brands.svg" alt="icono instagram"></a>
+						<a href="https://www.youtube.com/c/turismobuenosairesok" target="_blank"><img src="assets/img/icons/youtube-brands.svg" alt="icono instagram"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
